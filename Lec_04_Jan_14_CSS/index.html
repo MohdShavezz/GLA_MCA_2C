@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        nav .right {
+            gap: 5;
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+        }
+
+        .common-btn {
+            padding: 3px 20px;
+            border: 1px solid;
+            border-radius: 6px;
+        }
+
+        .signup-btn {
+            background: #b0b0e0;
+        }
+
+        nav .right button:hover {
+            background-color: #9c9cde;
+        }
+
+        nav .left {
+            font-size: xx-large;
+            font-weight: bolder;
+            padding-left: .5rem;
+        }
+
+        nav .right a {
+            text-decoration: none;
+        }
+
+        /* sidebar  */
+        aside {
+            width: 13rem;
+            background: yellow;
+            height: 88vh;
+            border: 1px solid;
+            position: absolute;
+            transition: .5s ease;
+        }
+
+        aside ul li {
+            text-align: center;
+
+            padding-top: .5rem;
+        }
+
+        aside ul {
+            padding-top: 1rem;
+        }
+
+        aside .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .hide {
+            margin-left: -11rem;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            height: 88vh;
+            background-color: #b0b0e0;
+        }
+
+        .hero .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            padding-left: 5rem;
+        }
+
+        .hero .right {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            nav .right a {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="left">LOGO</div>
+        <div class="right">
+            <a href="">Home</a>
+            <a href="">Contact</a>
+            <a href="">Services</a>
+            <a href="">Blog</a>
+            <button class="common-btn login-btn">Login</button>
+            <button class="common-btn signup-btn">Signup</button>
+        </div>
+    </nav>
+    <div style="display: flex;">
+        <aside>
+            <div class="icon">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+            </ul>
+        </aside>
+
+        <div class="hero">
+            <div class="left">
+                <h1>
+                    Revolutionize Your Academic Writing Workflow With ACADLANCE
+                </h1>
+                <p>
+                    Our platform is a perfect blend for both experts and clients! Experts can showcase their skills and
+                    secure fair pay, while clients can access top-tier experts and streamline projects effortlessly.
+                </p>
+                <button class="common-btn" style="width: 10rem;">GET STARTED</button>
+            </div>
+            <div class="right">
+                <img src="womanlaptop.webp" alt="my-laptop" height="300" width="300">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        document.querySelector('.icon').addEventListener('click', () => {
+            // document.querySelector('aside').classList.add('hide')
+            document.querySelector('aside').classList.toggle('hide')
+        })
+    </script>
+</body>
+
+</html>
