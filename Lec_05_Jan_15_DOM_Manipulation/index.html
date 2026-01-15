@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H2 id="my-id">this is heading</H2>
+    <p>we're gonna learn dom manippulation</p>
+    <div id="container">
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+    </div>
+
+    <section>
+        <span>this is me</span>
+        <button>click me</button>
+    </section>
+
+    <div id="yello-par" style="background-color: yellow;width: 100%;"">
+        <p>hthi isfja fajf </p>
+        <p>this is content</p>
+    </div>
+     <button id="for-yellow-btn" onclick="fn()">click</button>
+
+     <h3>Mouse Events</h3>
+     <span onmouseover="mouseover()" onmouseout="mouseout()" onmouseenter="mouseenter()">check</span>
+
+
+    <script>
+        window.addEventListener('load',()=>{
+            console.log('loading...')
+        })
+
+
+        function mouseover(){
+            // window.console.log('mouse over runs..')
+            console.log('mouse over runs..')
+        }
+        function mouseenter(){
+            console.log('mouse enter runs..')
+        }
+        function mouseout(){
+            console.log('mouse out runs..')
+        }
+
+        function fn(){
+           const h2=document.createElement('h2')
+           h2.innerText='this is new'
+        //    document.getElementById('yello-par').appendChild(h2)
+            document.getElementById('yello-par').insertAdjacentElement("beforebegin",h2)  // afterbegin, afterend,beforebegin,beforeend
+         
+        }
+
+        const section=document.querySelector('section')
+        section.addEventListener('click',()=>{
+            // section.innerText='update value'
+            // section.innerText='<h2>update value</h2>'
+            section.innerHTML='<h2>update value</h2>'
+        })
+        
+         // select multiple paragraph values 
+        // const container=document.querySelectorAll('#container p')
+        // container.forEach(element => {
+        //     console.log(element.innerHTML)
+        // });
+
+        // change bg color to red 
+        // const my_heading=document.getElementById('my-id')
+        // my_heading.addEventListener('click',()=>{
+        //     my_heading.style.backgroundColor='red'
+        // })
+        // const container=document.querySelector('#id')
+        // const container=document.querySelector('.id')
+        // const container=document.querySelector('div')
+
+        // document.getElementById('my-id').addEventListener('click',()=>{
+        //     console.log('h2 clikecd')
+        //     alert('h2 clicked')
+        // })
+
+        
+
+       
+
+
+
+    </script>
+</body>
+</html>

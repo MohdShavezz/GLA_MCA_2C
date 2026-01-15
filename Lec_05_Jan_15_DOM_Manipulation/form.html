@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="handleSubmit(event)">
+        <input type="text" name="name" placeholder="name" id="name"> <br>
+        <input type="text" name="age" placeholder="age" id="age"> <br>
+        <input type="email" name="email" placeholder="email" id="email"> <br>
+        <input type="file" accept="image/*" id="photo"> <br>
+        <button type="submit">click</button>
+
+        <div class="output"></div>
+    </form>
+
+
+    <script>
+
+        function handleSubmit(event){
+            event.preventDefault()
+            const name=document.getElementById('name').value
+            const age=document.getElementById('age').value
+            const email=document.getElementById('email').value
+            const photo=document.getElementById('photo')
+            // console.log(URL.createObjectURL(photo))
+            // console.log(photo.files[0])
+
+            let pname=document.createElement('p')
+            let page=document.createElement('p')
+            let pemail=document.createElement('p')
+            let img=document.createElement('img')
+            pname.innerText=name
+            page.innerText=age
+            pemail.innerText=email
+
+            let result=document.querySelector('.output')
+            result.appendChild(pname)
+            result.appendChild(page)
+            result.appendChild(pemail)
+
+            if(photo.files.length>0){
+                let url=URL.createObjectURL(photo.files[0])
+                img.src=url
+                result.appendChild(img)
+            }
+
+
+
+            console.log(name,age,email,photo)
+        }
+        // function submitHandle(event){
+        //     //    console.log(document.getElementById('name').value)
+        //     event.preventDefault()
+        //     const formData = new FormData(event.target)
+        //     // console.log(formData.get('name'))
+        //     console.log(Object.fromEntries(formData.entries()))
+        // }
+    </script>
+</body>
+</html>
