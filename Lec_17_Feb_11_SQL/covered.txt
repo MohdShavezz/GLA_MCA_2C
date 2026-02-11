@@ -1,0 +1,4 @@
+sql constrains
+types of relationship mapping between tables
+primary/foreign key
+various joins
