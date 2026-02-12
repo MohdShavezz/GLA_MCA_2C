@@ -1,0 +1,5 @@
+SQL: interview questions on group by and subqueries
+
+PPT Node.js: https://1drv.ms/p/c/7f036de033caac6e/IQA2QkrxSxAsS59JY8yl4heCAYMWRzzqqFdw128eukXJKLA?e=KuZedW
+
+NodeJs: Intro, Callstack Execution Order Micro Macro Queue, Event drivent architecture blocking/non-blocking io operations event loop npm package 
