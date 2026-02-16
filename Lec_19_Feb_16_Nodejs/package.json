@@ -1,0 +1,22 @@
+{
+  "name": "mca_2c",
+  "version": "1.0.0",
+  "description": "OneNote: https://1drv.ms/o/c/7f036de033caac6e/IgAj7W5lnx7WQpV0rW55-tGGASIe0C9AjcZkJ9_fKci8Wm0?e=FoJmO5",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohdShavezz/GLA_MCA_2C.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohdShavezz/GLA_MCA_2C/issues"
+  },
+  "homepage": "https://github.com/MohdShavezz/GLA_MCA_2C#readme"
+}
